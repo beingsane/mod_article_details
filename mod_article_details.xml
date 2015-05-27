@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_article_details</name>
+	<author>Novus Idea</author>
+	<creationDate>July 2004</creationDate>
+	<copyright>Copyright (C) 2015 Novus Idea. All rights reserved.</copyright>
+	<license>GNU General Public License version 2</license>
+	<authorEmail>mail@novusidea.de</authorEmail>
+	<authorUrl>novusidea.de</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_ARTICLE_DETAILS_XML_DESCRIPTION</description>
+	
+	<files>
+		<filename module="mod_article_details">mod_article_details.php</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>mod_article_details.xml</filename>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_article_details.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_article_details.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_article_details.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_article_details.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+		
+			<fieldset name="basic">
+			
+				<field
+					name="css_id"
+					type="text"
+					default=""
+					label="MOD_ARTICLE_DETAILS_FIELD_CSS_ID_LABEL"
+					description="MOD_ARTICLE_DETAILS_FIELD_CSS_ID_DESC"
+				/>
+			
+				<field
+					name="css_class"
+					type="text"
+					default=""
+					label="MOD_ARTICLE_DETAILS_FIELD_CSS_CLASS_LABEL"
+					description="MOD_ARTICLE_DETAILS_FIELD_CSS_CLASS_DESC"
+				/>
+				
+				<field name="spacer1" type="spacer" hr="true" />
+				
+				<field
+					name="show_category"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_ARTICLE_DETAILS_FIELD_SHOW_CATEGORY_LABEL"
+					description="MOD_ARTICLE_DETAILS_FIELD_SHOW_CATEGORY_DESC"
+				>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field
+					name="link_category"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_ARTICLE_DETAILS_FIELD_LINK_CATEGORY_LABEL"
+					description="MOD_ARTICLE_DETAILS_FIELD_LINK_CATEGORY_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="show_parent_category"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_ARTICLE_DETAILS_FIELD_SHOW_PARENT_CATEGORY_LABEL"
+					description="MOD_ARTICLE_DETAILS_FIELD_SHOW_PARENT_CATEGORY_DESC"
+				>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field
+					name="link_parent_category"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_ARTICLE_DETAILS_FIELD_LINK_PARENT_CATEGORY_LABEL"
+					description="MOD_ARTICLE_DETAILS_FIELD_LINK_PARENT_CATEGORY_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="spacer2" type="spacer" hr="true" />
+				
+				<field
+					name="show_author"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_ARTICLE_DETAILS_FIELD_SHOW_AUTHOR_LABEL"
+					description="MOD_ARTICLE_DETAILS_FIELD_SHOW_AUTHOR_DESC"
+				>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field
+					name="link_author"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_ARTICLE_DETAILS_FIELD_LINK_AUTHOR_LABEL"
+					description="MOD_ARTICLE_DETAILS_FIELD_LINK_AUTHOR_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="show_create_date"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_ARTICLE_DETAILS_FIELD_SHOW_CREATE_DATE_LABEL"
+					description="MOD_ARTICLE_DETAILS_FIELD_SHOW_CREATE_DATE_DESC"
+				>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field
+					name="show_modify_date"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_ARTICLE_DETAILS_FIELD_SHOW_MODIFY_DATE_LABEL"
+					description="MOD_ARTICLE_DETAILS_FIELD_SHOW_MODIFY_DATE_DESC"
+				>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field
+					name="show_publish_date"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_ARTICLE_DETAILS_FIELD_SHOW_PUBLISH_DATE_LABEL"
+					description="MOD_ARTICLE_DETAILS_FIELD_SHOW_PUBLISH_DATE_DESC"
+				>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field
+					name="show_hits"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_ARTICLE_DETAILS_FIELD_SHOW_HITS_LABEL"
+					description="MOD_ARTICLE_DETAILS_FIELD_SHOW_HITS_DESC"
+				>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+				
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				/>
+					
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+				>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+				/>
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static"
+				>
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="Novus Idea Updates">http://updates.novusidea.de/mod/mod_article_details/mod_article_details.xml</server>
+	</updateservers>
+</extension>
